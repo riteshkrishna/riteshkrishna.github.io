@@ -14,7 +14,7 @@ The name of this blog - **360&deg; Computing** reflects my own views about compu
 The **360** also has an historic IBM connection and you can read about it [here](https://en.wikipedia.org/wiki/IBM_System/360)
 
 
-
+About this website: This website is created using Jekyll and GitHub Pages. New content is published through custom GitHub Actions workflow.
 
 
 
