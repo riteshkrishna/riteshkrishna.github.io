@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Agentic workflows and the chain-of-thought technique</title>
+
+  
+
+  <meta name="description" content="Automation of tasks and lowering of skill barriers are two primary usages of AI agents. In a cross-organization, cross-disciplinary collaboration, complimentary skills are required to act towards shared goals with speed, accountability, and desirably, through automated workflows. Here, a workflow can be understood as a sequence of tools that need...">
+
+  
+
+  
+  <meta name="keywords" content="AI, genomics, data, research, life sciences, computing, ibm, ibm research">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Ritesh Krishna, PhD">
+  <meta property="og:title" content="Agentic workflows and the chain-of-thought technique">
+  <meta property="og:description" content="Automation of tasks and lowering of skill barriers are two primary usages of AI agents. In a cross-organization, cross-disciplinary collaboration, complimentary skills are required to act towards shared goals with speed, accountability, and desirably, through automated workflows. Here, a workflow can be understood as a sequence of tools that need...">
+
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="">
+  <meta property="og:article:published_time" content="2026-04-24T17:35:10-04:00">
+  <meta property="og:url" content="http://localhost:4000/2026-04-24-agents/">
+  <link rel="canonical" href="http://localhost:4000/2026-04-24-agents/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Agentic workflows and the chain-of-thought technique">
+  <meta property="twitter:description" content="Automation of tasks and lowering of skill barriers are two primary usages of AI agents. In a cross-organization, cross-disciplinary collaboration, complimentary skills are required to act towards shared goals with speed, accountability, and desirably, through automated workflows. Here, a workflow can be understood as a sequence of tools that need...">
+
+  
+
+  
+
+
+  
+
+  
+
+</head>
+
+
+<body>
+
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">Ritesh Krishna, PhD</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://scholar.google.com/citations?user=366U4MMAAAAJ&hl=en">Author's home</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var searchjson = '[ \
+       \
+        { \
+          "title"    : "Agentic workflows and the chain-of-thought technique", \
+          "category" : "", \
+          "url"      : "/2026-04-24-agents/", \
+          "date"     : "April 24, 2026" \
+        }, \
+       \
+       \
+        { \
+          "title"    : "", \
+          "category" : "page", \
+          "url"      : "/404.html", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "About", \
+          "category" : "page", \
+          "url"      : "/about/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "Contact", \
+          "category" : "page", \
+          "url"      : "/contact/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "360&amp;deg; Computing", \
+          "category" : "page", \
+          "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        } \
+       \
+    ]';
+    searchjson = JSON.parse(searchjson);
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: searchjson
+    });
+  </script>
+</div>
+
+
+
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Agentic workflows and the chain-of-thought technique</h1>
+          
+
+          
+            <span class="post-meta">Posted on April 24, 2026</span>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+
+      
+
+      <article role="main" class="blog-post">
+        <p>Automation of tasks and lowering of skill barriers are two primary usages of AI agents. In a cross-organization, cross-disciplinary collaboration, complimentary skills are required to act towards shared goals with speed, accountability, and desirably, through automated <em>workflows</em>. Here, a workflow can be understood as a sequence of tools that need to be executed in a certain order to produce a desired outcome. The output from one tool is consumed as the input for the subsequent tool, and so on. Agentic AI is quickly emerging as a technical paradigm to perform logical action sequences in automated fashion to replicate the manual process of building workflows. The business of building and executing workflows is as old as the computing itself, but the agentic paradigm and the related technologies offer something that was always desired, but was never truly there - the power to plan, co-ordinate, and execute multiple steps in a completely automated way. A central component of an agentic AI system is a LLM (Large Language Models) that handles the job of reasoning, co-ordination and execution of tools via the <em>agents</em>.</p>
+
+<h2 id="motivation">Motivation</h2>
+<p>A couple years ago, in the pre-LLM era, we wrote a <a href="https://patents.google.com/patent/US20220292389A1/en">patent</a> about an intelligent compute workflow that could change its shape in the middle of an execution, depending on the nature of the data. We named this type of workflow as <strong>Self-morphing workflows</strong>. The basic idea was that there are set of pre-defined tools, where each tool had rich metadata associate with it. The metadata contained a variety of information related to the nature and usage of tool. There was also an <strong><em>orchestrator</em></strong> - a computationally adept engine that could read the tool-metadata, user instructions and the nature of data in flight. The orchestrator acted as the brain of the system, and depending on the nature of data, it would decide to call the appropriate tool in an <strong><em>event-driven manner</em></strong>, eventually leading to creation of a workflow. The idea was theoretically simpler, but practically substantially harder to implement. The hardest part was the implementation of the orchestrator as its intelligence was limited to as much as we could explicitly state through instructions or inferences.</p>
+
+<figure>
+    <img src="/imgs/agents_patent.png" alt="The self-morphing workflow" />
+    <figcaption>Patent on self-morphing workflow
+    </figcaption>
+</figure>
+
+<p>In the current LLM-era, the equivalent of <em>Orchestrator</em> from our context, is a LLM model. Since a LLM model has a power to <em>think</em>, it makes the engineering effort to implement the orchestrator, almost obsolete. Instead of implementing orchestrator from scratch, one can just plug-and-play a LLM model in the original patent design and implement the whole system.</p>
+
+<p>Let me provide you an example as how LLM, combined with AI agents, can leverage what we know as <strong><em>the chain of thoughts</em></strong> technique to autonomously build a compute workflow comprising of multiple tools.</p>
+
+<h2 id="a-toy-example-of-a-workflow">A toy example of a workflow</h2>
+<figure>
+    <img src="/imgs/agents_pic1.png" alt="The Bioinformatician's set of steps." />
+    <figcaption>An example of an interdisciplinary collaboration where a chemist and a biologist are working together using a mix of tools from different domain.
+    </figcaption>
+</figure>
+
+<p>I provide here a simple example from Life Sciences domain, but the task requirements are similar across other domains. Let’s assume a scenario where a chemist and a biologist are working together to understand genetic triggers for a disease of interest. The have zoomed in on a gene/protein named BRCA1 and want to understand which other genes BRCA1 is known to interact with. The task requires searching through a publicly available knowledgebase and deriving a visual representation of interaction of BRCA1 with other known genes. Typically, a task like this requires some domain expertise in bioinformatics where one needs to understand the gene naming conventions, usage of knowledgebases, extraction of information etc. In this scenario, neither of the scientists may possess the bioinformatics skills and may reach out to their bioinformatics colleagues for help - or, in the world of <em>agentic systems</em>,  they may <em>prompt</em> the system to think, design and execute a workflow to give them the desired result. The agentic system would not have a hard-coded instruction to construct a workflow, but it could rather use the <strong>chain of thoughts</strong> technique to plan a workflow where at different stages, an agent (or a collection of them) would be called to perform particular operations. Each agent would be able to call a tool (or a set of tools) to perform specific set of actions. It is important to stress that the <strong><em>tools are the first-class citizens in the agentic world</em></strong>, and define an agent’s core capability.</p>
+
+<figure>
+    <img src="/imgs/agents_pic2.png" alt="The Bioinformatician's set of steps." />
+    <figcaption>The set of steps an expert bioinformatician would have taken to answer the desired question. First, understand that the user is asking for a gene called BRCA1. Map the gene name to a standard identifier (in this case BRCA1 maps to 9606.ENSP00000418960 ). Use the mapped identifier to query a public database https://string-db.org via an API. Finally, retrieve an image file.
+    </figcaption>
+</figure>
+
+<p>The set of steps can be translated to a simple flowchart with four stages - understand which gene user is asking for, map the gene name to standard identifier, use the identifier to query a knowledgebase to extract the result in an image form, and do a final check before concluding.</p>
+
+<figure>
+    <img src="/imgs/agents_pic3.png" alt="The Bioinformatician's flowchart." />
+    <figcaption>The Bioinformatician's set of steps translated in form of a flowchart.</figcaption>
+</figure>
+
+<p>One may also add an additional check in the beginning to make sure that the workflow is triggered only when the user provides a gene name, not just any random input. In this case, the flowchart will have decision step in the beginning that will decide if the workflow should be triggered or terminated straight away. The last three stages are specific operations and thus may have a tool for each of them. The schematic below shows the amended flowchart. &lt;p style="color:red"&gt; Different stages of the flowchart are coloured differently to denote specific operations. The last three stages of the flowchart have been numbered (coloured circles with numbers next to the blocks) - the circles denote the tool identifiers for the corresponding colour operation in the flowchart. &lt;/p&gt;</p>
+
+<figure>
+    <img src="/imgs/agents_amendedflowchart.png" alt="The Bioinformatician's amended flowchart." width="500" height="800" class="center" />
+    <figcaption>The amended flowchart with a decision stage. Also showing the different tool identifiers associated with each stage
+    </figcaption>
+</figure>
+
+<p>The above flowchart shows an expert-curated set of steps to perform the desired task. However, in an agentic paradigm, we would want the flowchart to be automatically generated by the LLM, and the tools to be executed in the correct order so we can achieve similar outcome like the expert-curated flowchart. In order to proceed with the agentic paradigm, we need a LLM and the set of tools (numbered 1, 2 and 3 as in the figure above). The user should provide a query (or <em>prompt</em>) in natural language asking for the interaction network of BRCA1 gene. Our agentic system should first determine that the user query is a valid request (akin to the decision stage in the flowchart), and then figure out on it own that what tool should be called in what order to produce a result similar to what can be achieved through expert-curated flowchart.</p>
+
+<h2 id="the-agentic-workflow">The agentic workflow</h2>
+
+<figure>
+    <img src="/imgs/agents_llmflow.png" alt="The LLM flow." />
+    <figcaption>A schematic of translating the mechanisms in flowchart through an agentic system comprising on an LLM and a set of available tools.
+    </figcaption>
+</figure>
+
+<p>The above picture is divided into three panels. The first panel (A) shows the expert-curated flowchart. There are four steps in the flowchart with the first one being a decision step. The other three steps involve tool calling and are associated with tools number 1, 2 and 3 that must be called in the same order. The middle panel (B) shows an agentic system where the boxed step in red, corresponds to the decision step in the traditional flowchart (the dashed arrow shows the correspondance). There is a <em>triage router</em> in the middle that decides whether to proceed with an agent to do something further, or terminate the user request. If the <em>triage router</em> doesn’t terminate the user request, then it can call a <em>reponse agent</em> to do something. It is the job of the <em>response agent</em> to think and design the steps that correspond to the steps in the flowchart (dashed arrow shows the correspondance). Panel (C) shows the inner working of the response agent. The response agent <em>consults</em> the LLM and decided to <em>pick</em> the tool of relevance, executes it, and loops back to wait for the instructions from the LLM. Based on the instruction, it decides to either call a tool, or break the loop to terminate the process. If the system is designed properly, it should be able to call correct tools in correct order, similar to what we noted in the expert-driven flowchart.</p>
+
+<h3 id="what-it-looks-like-when-working">What it looks like when working</h3>
+<p>Let me show a demonstration of the agent and LLM interaction when provided with a user prompt. First start with a rubbish prompt and see the response. I have provided a <em>prompt</em> in natural language as “Fetch network map for Mordor”. Obviously, Mordor is not a gene name and the system’s decision-making step at <em>triage_router</em> the input should fail.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">response</span> <span class="o">=</span> <span class="n">overall_workflow</span><span class="p">.</span><span class="n">invoke</span><span class="p">({</span><span class="s">"messages"</span> <span class="p">:</span> <span class="p">[</span><span class="s">"Fetch network map for Mordor"</span><span class="p">]})</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s">"messages"</span><span class="p">]:</span>
+    <span class="n">m</span><span class="p">.</span><span class="n">pretty_print</span><span class="p">()</span></code></pre></figure>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The query 'Fetch network map for Mordor' does not contain any gene names based on the provided criteria. 
+There are no words with all capital letters, words starting with 'Gene:', words containing 'ENSG' or 'ENSP', or alphanumeric combinations that fit the gene name definition. 
+The term 'Mordor' is a fictional location from J.R.R. Tolkien's works and does not qualify as a gene name. 
+
+
+Extracted Gene Id from the prompt = none
+
+🔔🔔 The gene name could not be found. Call humans!
+</code></pre></div></div>
+<p>We see that the <em>triage_router</em> has flagged that Mordor is not a gene name. It also provides a logic as how it identifies a gene name. This is a logic that I had provided the system as an internal prompt (again using natural language) to the LLM.  The message further outputs an information <em>“The term ‘Mordor’ is a fictional location from J.R.R. Tolkien’s works and does not qualify as a gene name.”</em> - this is something that came out from LLM itself, and had no inputs from me while building the system.</p>
+
+<p>Now, let’s give a sensible prompt and see the response. This time, I am using a little hint for the system to identify the gene name from the prompt.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">response</span> <span class="o">=</span> <span class="n">overall_workflow</span><span class="p">.</span><span class="n">invoke</span><span class="p">({</span><span class="s">"messages"</span> <span class="p">:</span> <span class="p">[</span><span class="s">"Fetch network map for Gene:BRCA1"</span><span class="p">]})</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s">"messages"</span><span class="p">]:</span>
+    <span class="n">m</span><span class="p">.</span><span class="n">pretty_print</span><span class="p">()</span></code></pre></figure>
+
+<p>The following output shows <em>the chain of thoughts</em> process where first the <em>triage_router</em> approves the input and calls the agent. The agent goes in a loop with LLM and the set of available tools and calls them one after the other. The output contains blocks named as “Ai Message” and “Tool Message” that come each time the LLM is <em>thinking</em> and a tool is <em>called</em>. We see that there are three tool calls, each one after some <em>thinking</em> has been performed. These tools have been called in the same order as what we expected based on our expert-curated flowchart.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The query 'Fetch network map for Gene:BRCA1' contains the substring 'Gene:' followed by 'BRCA1'. 
+According to the rules, a word starting with 'Gene:' can be a gene name. Therefore, 'BRCA1' is the gene name. 
+
+ 📧 Classification: RESPOND - This gene requires a response 
+
+=============== Ai Message =============== 
+&lt;think&gt; 
+Okay, the user wants the network map for the gene BRCA1 in the Human species. Let me break this down. 
+First, I need to convert the gene name BRCA1 into a string identifier. The tool convert_gene_to_string 
+is for that. I'll call that function with gene_name set to BRCA1. Once I get the string ID, the next 
+step is to use get_network_for_string_identifier with that ID to fetch the network image. Since the user 
+mentioned the Human species, I should ensure the conversion tool is set to human, but the function 
+parameters don't specify species. Maybe the tool defaults to human. Let me proceed step by step. Start 
+with converting the gene name. 
+&lt;/think&gt; 
+
+Tool Calls: 
+    convert_gene_to_string (031c0169-f5e2-4c6b-b1cb-779344c443b2) 
+  Call ID: 031c0169-f5e2-4c6b-b1cb-779344c443b2 
+  Args: 
+    gene_name: BRCA1 
+
+=============== Tool Message =============== 
+The gene name BRCA1 has an equivalent string database identifier as 9606.ENSP00000418960 
+
+=============== Ai Message =============== 
+&lt;think&gt; 
+Okay, so the user asked for the network map of the BRCA1 gene in humans. First, I needed to convert the 
+gene name to a string ID. I used the convert_gene_to_string tool with BRCA1, and the response was 9606.
+ENSP00000418960. Now, the next step is to get the network using that string ID. I should call 
+get_network_for_string_identifier with the obtained ID. Let me make sure I use the correct format. The 
+tool requires the string_id parameter, so I'll input 9606.ENSP00000418960 there. That should retrieve 
+the network image. No need for further questions since the ID is provided. Just proceed to call the 
+function. 
+&lt;/think&gt; 
+
+Tool Calls: 
+    get_network_for_string_identifier (343fd994-c51f-40bb-9a41-ec031115d34e) 
+  Call ID: 343fd994-c51f-40bb-9a41-ec031115d34e 
+  Args: 
+    string_id: 9606.ENSP00000418960 
+
+=============== Tool Message =============== 
+The network image for the 9606.ENSP00000418960 is stored at location = ../images/9606.ENSP00000418960_network.png 
+
+=============== Ai Message =============== 
+&lt;think&gt; 
+Okay, let me recap. The user wanted the network map for BRCA1 in humans. First, I converted BRCA1 to the 
+string ID 9606.ENSP00000418960 using the convert_gene_to_string tool. Then, I used 
+get_network_for_string_identifier with that ID to get the network image. The response gave the image 
+location. Now, I need to confirm if this meets the user's request. Since they asked for the network map 
+and the image path is provided, the task is complete. I should inform them of the image location and 
+offer further help if needed. No more tools required here. Done. 
+&lt;/think&gt; 
+
+The network map for the gene **BRCA1** (string ID: 9606.ENSP00000418960) is available at the following 
+location: `../images/9606.ENSP00000418960_network.png` Let me know if you need further assistance! 
+
+Tool Calls: 
+    Done (ce391f1a-7b9e-4fe8-8c7d-07ef8cf3037f) 
+  Call ID: ce391f1a-7b9e-4fe8-8c7d-07ef8cf3037f 
+Args: 
+    done: True
+
+</code></pre></div></div>
+<p>In the end, when the process is finished, the system downloads the network image for BRCA1 as shown in the figure below. We can see that one of the nodes in the following graph is BRCA1, and all other nodes are directly connected to it.</p>
+
+<figure>
+    <img src="/imgs/agents_network.png" alt="The retrieved network." width="400" height="400" class="center" />
+    <figcaption>BRCA1 interaction network image .
+    </figcaption>
+</figure>
+
+<p>This is a basic demonstration of how a LLM combined with an agent can <em>stitch</em> a workflow using <em>the chain of thoughts</em>. This corresponds to the idea of <em>orchestrator</em> as we discussed in the beginning of this post. When the number of agents and tools increase, the complexity of the system will increase as well. I haven’t shown in this example as how the system can have <em>memory</em> and the ability to call <em>humans in the loop</em> - the two capabilities that are central to any agentic system. But hopefully, you got a basic idea of about the fundamental capability an agentic system can bring. There are many frameworks for implementing an agentic system - I used LangGraph as the framework and Qwen as the LLM to build this demonstration. Now, an important question is - does it work consistently every time? The answer is - No! The LLMs can <em>behave</em> differently each time they are called, and thus, there are other engineering mechanisms that must be applied in form of <em>guardrails</em> - <em>humans-in-the-loop</em> being one of them.</p>
+
+
+      </article>
+
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+    <a href="https://twitter.com/intent/tweet?text=Agentic+workflows+and+the+chain-of-thought+technique&url=http%3A%2F%2Flocalhost%3A4000%2F2026-04-24-agents%2F"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fab fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F2026-04-24-agents%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2026-04-24-agents%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        
+      </ul>
+      
+  
+  
+  
+
+  
+
+
+  
+
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:ritesh.krishna@gmail.com" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/riteshkrishna" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+      2026
+
+      
+
+      
+
+      
+        &nbsp;&bull;&nbsp;
+        <a title="Edit this page on GitHub" href="https://github.com/riteshkrishna/riteshkrishna.github.io/edit/gh-pages/_posts/2026-03-31-agents.markdown" class="text_muted">Edit page</a>
+       
+
+      </p>
+      <p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
