@@ -49,7 +49,7 @@ The set of steps can be translated to a simple flowchart with four stages - unde
     <figcaption>The Bioinformatician's set of steps translated in form of a flowchart.</figcaption>
 </figure>
 
-One may also add an additional check in the beginning to make sure that the workflow is triggered only when the user provides a gene name, not just any random input. In this case, the flowchart will have decision step in the beginning that will decide if the workflow should be triggered or terminated straight away. The last three stages are specific operations and thus may have a tool for each of them. The schematic below shows the amended flowchart. <p style="color:red"> Different stages of the flowchart are coloured differently to denote specific operations. The last three stages of the flowchart have been numbered (coloured circles with numbers next to the blocks) - the circles denote the tool identifiers for the corresponding colour operation in the flowchart. </p>
+One may also add an additional check in the beginning to make sure that the workflow is triggered only when the user provides a gene name, not just any random input. In this case, the flowchart will have decision step in the beginning that will decide if the workflow should be triggered or terminated straight away. The last three stages are specific operations and thus may have a tool for each of them. The schematic below shows the amended flowchart.  Different stages of the flowchart are coloured differently to denote specific operations. The last three stages of the flowchart have been numbered (coloured circles with numbers next to the blocks) - the circles denote the tool identifiers for the corresponding colour operation in the flowchart. 
 
 
 <figure>
